@@ -1,0 +1,171 @@
+
+@use 'sass:math';
+
+
+// <ШРИФТ>
+// <Подключаем шрифты>
+//&display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700,800&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900&display=swap&subset=cyrillic-ext");
+
+$fontFamilyMain: "Playfair Display";
+$fontFamily-1: "Manrope";
+// $fontFamily-2: "";
+// $fontFamily-3: "";
+// $fontFamily-4: "";
+// </Подключаем шрифты>
+// <Основной размер шрифта>
+$fontWeightMain: 300;
+// $fontSizeMain: 18px;
+// </Основной размер шрифта>
+// </ШРИФТ>
+
+
+$minWidth: 320px;
+// $maxWidth: 1920;
+
+//Ширина основного контейнера
+$maxWidthContainer: 1200px + 30px;
+//Ширина вспомогательного контейнера
+$maxWidthSubContainer: 1300px + 30px;
+
+
+$md1: $maxWidthContainer;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+
+// <ЦВЕТА>
+
+// <Стандартные>
+$colorBlack: #000;
+$colorWhite: #FFF;
+// </Стандартные>
+
+// <Проектные>
+$colorTitle: #141414;
+$colorButton: #5c8692;
+$colorText: #555555;
+$colorIcons-1: #7A9CA5;
+$colorReviewsFooter: #1E2C30;
+$colorBorder: #134134; 
+$colorFooterBottom: #111E22;
+$colorbackground: #EBF3F5;
+$colorbackgroundW: #E5E5E5;
+// </Проектные>
+
+// </ЦВЕТА>
+
+// % уменьшения шрифта
+
+$procTit: .7;
+$procText: .8;
+$procMenu: .6;
+
+
+
+
+
+//Обнуление
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+   font-family: inherit;
+   font-weight: inherit
+}
+
+ul,
+ol,
+li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+
+}
+
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   // font-size: $fontSizeMain;
+   color: $colorTitle;
+   font-family: 'Playfair Display';
+   font-weight: 300;
+}
+//Блоки
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   
+}
+main {
+   flex: 1 1 auto;
+}
+._container {
+   position: relative;
+   max-width: $maxWidthContainer;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+._ibg{
+   position: relative;
+}
+._ibg img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+//ТО %
+@function prc($pxOne, $pxTwo) {
+   $result: math.div($pxOne, $pxTwo) * 100%;
+   @return $result;
+}
+//REM
+@function rem($px) {
+   $result: math.div($px, 16) + rem;
+   @return $result;
+}
+//EM
+@function em($pxOne, $pxFontpx) {
+   $result: math.div($pxOne, $pxFontpx) + em;
+   @return $result;
+}
+//LINE HEIGHT
+@function lh($pxOne, $pxTwo) {
+   $result: math.div($pxOne, $pxTwo);
+   @return $result;
+}
+//Отзывчивое св-во
+@function respon($pxOne, $proc) {
+   $result: ($pxOne * $proc) + ($pxOne - ($pxOne * $proc)) * ((100vw - $minWidth) / ($maxWidthContainer - $minWidth));
+   @return $result;
+}
+
+
