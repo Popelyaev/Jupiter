@@ -1,70 +1,6 @@
 
 @use 'sass:math';
-
-
-// <ШРИФТ>
-// <Подключаем шрифты>
-//&display=swap&subset=cyrillic-ext
-@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700,800&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900&display=swap&subset=cyrillic-ext");
-
-$fontFamilyMain: "Playfair Display";
-$fontFamily-1: "Manrope";
-// $fontFamily-2: "";
-// $fontFamily-3: "";
-// $fontFamily-4: "";
-// </Подключаем шрифты>
-// <Основной размер шрифта>
-$fontWeightMain: 300;
-// $fontSizeMain: 18px;
-// </Основной размер шрифта>
-// </ШРИФТ>
-
-
-$minWidth: 320px;
-// $maxWidth: 1920;
-
-//Ширина основного контейнера
-$maxWidthContainer: 1200px + 30px;
-//Ширина вспомогательного контейнера
-$maxWidthSubContainer: 1300px + 30px;
-
-
-$md1: $maxWidthContainer;
-$md2: 991.98px;
-$md3: 767.98px;
-$md4: 479.98px;
-
-// <ЦВЕТА>
-
-// <Стандартные>
-$colorBlack: #000;
-$colorWhite: #FFF;
-// </Стандартные>
-
-// <Проектные>
-$colorTitle: #141414;
-$colorButton: #5c8692;
-$colorText: #555555;
-$colorIcons-1: #7A9CA5;
-$colorReviewsFooter: #1E2C30;
-$colorBorder: #134134; 
-$colorFooterBottom: #111E22;
-$colorbackground: #EBF3F5;
-$colorbackgroundW: #E5E5E5;
-// </Проектные>
-
-// </ЦВЕТА>
-
-// % уменьшения шрифта
-
-$procTit: .7;
-$procText: .8;
-$procMenu: .6;
-
-
-
-
+@import "variables.scss";
 
 //Обнуление
 *,
@@ -109,9 +45,14 @@ body {
    height: 100%;
    line-height: 1;
    // font-size: $fontSizeMain;
-   color: $colorTitle;
-   font-family: 'Playfair Display';
+   color: $color4;
+   font-family: $fontFamilyMain;
    font-weight: 300;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
 }
 //Блоки
 .wrapper {
@@ -142,6 +83,7 @@ main {
    object-fit: cover;
 }
 
+
 //ТО %
 @function prc($pxOne, $pxTwo) {
    $result: math.div($pxOne, $pxTwo) * 100%;
@@ -168,4 +110,8 @@ main {
    @return $result;
 }
 
-
+@import "main.scss";
+@import "header.scss";
+@import "burger.scss";
+@import "footer.scss";
+@import "spoller.scss";

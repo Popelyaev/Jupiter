@@ -1,0 +1,46 @@
+._logo-wrapper {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 5px;
+}
+
+._logo {
+   font-family: $fontFamilyMain;
+   font-size: 35px;
+   font-weight: 700;
+   line-height: 42,67px;
+   text-transform: uppercase;
+}
+
+._sub-logo {
+   font-family: $fontFamilyMain;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 21,94px;
+   text-transform: uppercase;
+}
+
+._menu {
+   text-transform: uppercase;
+
+   & li:hover {
+      text-decoration: underline;
+   }
+}
+
+._call {
+
+}
+
+._location {
+   text-transform: uppercase;
+
+}
+
+._icon-call, ._icon-shopping, ._icon-place, ._icon-email {
+   &::before {
+      font-size: 24px;
+      margin-right: 10px;
+   }
+}

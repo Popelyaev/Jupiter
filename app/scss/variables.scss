@@ -1,0 +1,60 @@
+
+// <ШРИФТ>
+// <Подключаем шрифты>
+//&display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap&subset=cyrillic-ext");
+
+$fontFamilyMain: "Montserrat";
+$fontFamily-1: "Lato";
+// $fontFamily-2: "";
+// $fontFamily-3: "";
+// $fontFamily-4: "";
+// </Подключаем шрифты>
+// <Основной размер шрифта>
+$fontWeightMain: 300;
+// $fontSizeMain: 18px;
+// </Основной размер шрифта>
+// </ШРИФТ>
+
+
+$minWidth: 320px;
+// $maxWidth: 1920;
+
+//Ширина основного контейнера
+$maxWidthContainer: 1200px + 30px;
+//Ширина вспомогательного контейнера
+$maxWidthSubContainer: 1300px + 30px;
+
+
+$md1: $maxWidthContainer;
+$md2: 992.0px;
+$md3: 768.0px;
+$md4: 480.0px;
+
+// <ЦВЕТА>
+
+// <Стандартные>
+$colorBlack: #000;
+$colorWhite: #FFF;
+// </Стандартные>
+
+// <Проектные>
+$color1: #595959;
+$color2: #EFEFEF;
+$color3: #FFB547;
+$color4: #000000;
+$color5: #FCF8F3;
+$color6: #595959;
+$color7: #a4a4a450;
+$color8: #E97171;
+
+// </Проектные>
+
+// </ЦВЕТА>
+
+// % уменьшения шрифта
+
+$procTit: .7;
+$procText: .8;
+$procMenu: .6;
