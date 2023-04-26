@@ -1,0 +1,162 @@
+.sale {
+   background: linear-gradient($color7);
+
+   &__title {
+   }
+
+   &__wrapper-product {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      gap: rem(2);
+   }
+   &__absolut {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      padding-bottom: 100%;
+   }
+
+   &__product {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      // overflow: hidden;
+   }
+
+   &__img-wrapper {
+      flex: 0 1 auto;
+      background-color: $color1;
+      width: 100%;
+      overflow: hidden;
+   }
+
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__procent {
+   }
+
+   &__price-wrapper {
+      padding: rem(20) rem(20);
+      background-color: $color1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $color5;
+      width: 100%;
+      
+   }
+
+   &__price-name {
+      max-width: rem(150);
+      
+
+   }
+
+   &__price-much>*:not(:last-child) {
+      margin-bottom: rem(10);
+   }
+
+   &__price-old {
+      font-family: $fontFamilyMain;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: lh(19.5, rem(16));
+      color: $color8;
+      text-align: right;
+      text-decoration: line-through;
+   }
+
+   &__price-new {
+      font-family: $fontFamilyMain;
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: lh(22, rem(18));
+      text-transform: uppercase;
+      color: #00FF29;
+      text-align: right;
+
+   }
+
+   &__price-button {
+      font-family: $fontFamilyMain;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: lh(19.5, rem(16));
+      background-color: $color3;
+      padding: rem(10) rem(35);
+      border-radius: rem(6);
+      cursor: pointer;
+      color: $color4;
+   }
+
+
+   &__price-title {
+   font-family: $fontFamilyMain;
+   font-size: rem(20);
+   font-weight: 400;
+   line-height: lh(24, rem(20));
+   text-transform: uppercase;
+   display: inline;
+   margin-bottom: rem(10);
+   }
+
+   &__price-sub-title {
+      font-family: $fontFamilyMain;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: lh(19.5, rem(16));
+      display: inline;
+   }
+}
+
+@media (max-width: $md1) {
+   .sale {
+      &__price-title {
+         font-size: respon(20, $procTit);
+      }
+
+      &__price-sub-title {
+         font-size: respon(16, $procTit);
+      }
+
+      &__price-button {
+         font-size: respon(16, $procTit);
+         padding: respon(10, $procTit) respon(16, $procTit);
+      }
+
+      &__price-new {
+         font-size: respon(18, $procTit);
+      }
+
+      &__price-old {
+         font-size: respon(16, $procTit);
+      }
+   }
+}
+@media (max-width: $md2) {
+   .sale {
+      &__wrapper-product {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(3, 1fr);
+      }
+   }
+}
+
+@media (max-width: $md3) {
+   .sale {
+      &__wrapper-product {
+         grid-template-columns: repeat(1, 1fr);
+         grid-template-rows: repeat(6, 1fr);
+         max-width: rem(470);
+      }
+   }
+}

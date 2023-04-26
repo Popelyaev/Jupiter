@@ -44,7 +44,7 @@ html,
 body {
    height: 100%;
    line-height: 1;
-   // font-size: $fontSizeMain;
+   font-size: $fontSizeMain;
    color: $color4;
    font-family: $fontFamilyMain;
    font-weight: 300;
@@ -53,6 +53,7 @@ body {
 body {
    display: flex;
    flex-direction: column;
+   background-color: $color5;
 }
 //Блоки
 .wrapper {
@@ -64,6 +65,7 @@ body {
 }
 main {
    flex: 1 1 auto;
+   min-width: 0;
 }
 ._container {
    position: relative;
@@ -83,6 +85,9 @@ main {
    object-fit: cover;
 }
 
+._hidden {
+   display: none;
+}
 
 //ТО %
 @function prc($pxOne, $pxTwo) {
@@ -105,8 +110,15 @@ main {
    @return $result;
 }
 //Отзывчивое св-во
-@function respon($pxOne, $proc) {
-   $result: ($pxOne * $proc) + ($pxOne - ($pxOne * $proc)) * ((100vw - $minWidth) / ($maxWidthContainer - $minWidth));
+@function respon($x1, $x2) {
+   $x1px: $x1 * 1px;
+   $result: calc(($x1px * $x2) + ($x1 - ($x1 * $x2)) * ((100vw - 320px) / (1230 - 320)));
+   @return $result;
+}
+
+@function responDif($x1, $x2) {
+   $x2px: $x2 * 1px;
+   $result: calc($x2px + ($x1 - $x2) * ((100vw - 320px) / (1230 - 320)));
    @return $result;
 }
 
@@ -115,3 +127,16 @@ main {
 @import "burger.scss";
 @import "footer.scss";
 @import "spoller.scss";
+@import "header-catalog.scss";
+@import "main1.scss";
+@import "catalog.scss";
+@import "sale.scss";
+@import "advantages.scss";
+@import "form.scss";
+@import "our-us.scss";
+@import "contacts.scss";
+@import "our-work.scss";
+@import "aside.scss";
+@import "catalog-page.scss";
+@import "product-page.scss";
+@import "slick.scss";

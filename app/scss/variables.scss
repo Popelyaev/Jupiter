@@ -13,7 +13,7 @@ $fontFamily-1: "Lato";
 // </Подключаем шрифты>
 // <Основной размер шрифта>
 $fontWeightMain: 300;
-// $fontSizeMain: 18px;
+$fontSizeMain: 16px;
 // </Основной размер шрифта>
 // </ШРИФТ>
 
@@ -31,6 +31,7 @@ $md1: $maxWidthContainer;
 $md2: 992.0px;
 $md3: 768.0px;
 $md4: 480.0px;
+$md5: 320.0px;
 
 // <ЦВЕТА>
 
@@ -45,9 +46,10 @@ $color2: #EFEFEF;
 $color3: #FFB547;
 $color4: #000000;
 $color5: #FCF8F3;
-$color6: #595959;
-$color7: #a4a4a450;
+$color6: #ffffffb0;
+$color7: (0deg, $color5, #FFE0B1, $color5);
 $color8: #E97171;
+
 
 // </Проектные>
 
@@ -58,3 +60,4 @@ $color8: #E97171;
 $procTit: .7;
 $procText: .8;
 $procMenu: .6;
+

@@ -29,6 +29,7 @@
       text-transform: uppercase;
    }
 
+
    &__menu-selection {
       max-width: 754px;
       width: 100%;
@@ -43,6 +44,11 @@
    }
 
    &__menu-item {
+      
+   }
+
+   &__menu-item ._spoller-active{
+      // display: none;
    }
 
    &__title-sub-menu {
